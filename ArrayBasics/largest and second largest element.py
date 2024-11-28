@@ -1,14 +1,18 @@
 class Solution:
-    def largestandsecondlargest(self,arr):
-        max=0
-        second_max=0
-        for i in arr:
-            if i>=max:
-                second_max=max
-                max=i
-            elif(i>=second_max):
-                second_max=i
-        return max,second_max
+	def secondLargest(self, nums) -> int:
+		# Your code goes here
+            max=float('-inf')
+            sec=float('-inf')
+            for i in range (0,len(nums)):
+                if nums[i]>max:
+                    sec=max
+                    max=nums[i]
+                elif nums[i]>sec and nums[i]!=max:
+                    sec=nums[i]
+
+            return sec
+            
+
     
 s=Solution()
-print(s.largestandsecondlargest([2,1,4,2,6,3,7,9,15,21,20]))
+print(s.secondLargest([2,1,4,2,6,3,7,9,15,21,20]))
