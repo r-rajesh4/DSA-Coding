@@ -3,7 +3,7 @@ class Solution:
         max=0
         second_max=0
         for i in arr:
-            if i>max:
+            if i=>max:
                 second_max=max
                 max=i
         return max,second_max
