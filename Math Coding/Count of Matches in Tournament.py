@@ -14,3 +14,4 @@ team=int(input("Enter Number of TeAM "))
 d=s.numberOfMatches(team)
 print("Number Of matches played is ::::::",d)
 		 
+
